@@ -6,7 +6,7 @@ Restaurant.destroy_all
   new_restaurant = Restaurant.create!(
     name: Faker::Restaurant.name,
     address: Faker::Address.street_address,
-    phone_number: Faker::PhoneNumber.phone_number,
+    phone_number: Faker::PhoneNumber.cell_phone_in_e164,
     category: ["chinese", "italian", "japanese", "french", "belgian"].sample
   )
   puts "created restaurant with id #{new_restaurant.id}"
